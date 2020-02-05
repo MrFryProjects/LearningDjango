@@ -1,1 +1,5 @@
-django >= 2.1.6, < 3.0
+Django==2.2.9
+pip==19.2.3
+pytz==2019.3
+setuptools==41.2.0
+sqlparse==0.3.0
