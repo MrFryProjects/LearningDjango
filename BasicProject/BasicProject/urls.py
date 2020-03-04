@@ -15,12 +15,15 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-
+from django.conf.urls import include, url
+import HelloDjangoApp.views
 # Uncomment next two lines to enable admin:
 #from django.contrib import admin
 #from django.urls import path
-
+#Django processes URLK patterns in the order they appear in the array
 urlpatterns = [
+    url(r'^$', HelloDjangoApp.views.index, name='index'),
+    url(r'^home$', HelloDjangoApp.views.index, name='home'),
     # Uncomment the next line to enable the admin:
     #path('admin/', admin.site.urls)
 ]
